@@ -1,0 +1,348 @@
+---
+title: "PLANO DE ATUAÇÃO DE PROMOTORIA DE JUSTIÇA 2024 - DIAGNÓSTICO E IDENTIFICAÇÃO"
+author: "Ministério Público do Estado do Espírito Santo"
+output:
+  html_document: default
+  word_document: default
+  pdf_document:
+    latex_engine: xelatex
+header-includes:
+  - \usepackage{graphicx}
+  - \usepackage{titling}
+  - \pretitle{\begin{center}\vspace*{-2cm}
+    \includegraphics[width=2in,height=2in]{Logo-MPES.png}\vspace{1cm}\LARGE\\}
+  - \posttitle{\end{center}}
+---
+
+
+```{r include=FALSE}
+knitr::opts_chunk$set(comment = NA)
+#lembrar de instalar no primeiro uso
+# tinytex::install_tinytex()
+#install.packages(readxl)
+```
+
+```{r inicialização, include=FALSE}
+
+#### Conecte-se ao banco de dados
+# 
+# library(RSQLite)
+# 
+# con <- dbConnect(SQLite(), dbname = "PAPG.sqlite")
+# 
+# #### Verifique se a tabela "configuracoes" existe
+# if(!dbExistsTable(con, "configuracoes")) {
+#   
+#   ## Crie a tabela "configuracoes"
+#   dbExecute(con, "CREATE TABLE configuracoes (id INTEGER PRIMARY KEY AUTOINCREMENT, valor INTEGER)")
+#   
+#   ## Insira o valor 1 na tabela
+#   dbExecute(con, "INSERT INTO configuracoes (valor) VALUES (1)")
+# }
+# 
+# #### Grava a tabela no banco de dados
+# 
+# # Leia o valor atual do banco de dados
+# valor_atual <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+# 
+# # Leia o data frame do arquivo Excel
+# library(readxl)
+# df <- read_excel("data/PAPJ.xlsx", sheet = "Form1")
+# 
+# linha <- dbGetQuery(con, "SELECT valor FROM configuracoes")$valor[1]
+# 
+# dbWriteTable(con, "forms", df, overwrite = TRUE)
+
+
+
+```
+
+
+
+# IDENTIFICAÇÃO
+
+```{r pergunta 1, include=FALSE, results='asis'}
+elemento <- df[linha,1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**ID**")}
+```
+
+
+```{r resposta 1, include=FALSE, results='asis'}
+elemento <- df[linha,1]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 2, include=FALSE, results='asis'}
+elemento <- df[linha,2]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Hora de início**")}
+```
+
+
+```{r resposta 2, include=FALSE, results='asis'}
+elemento <- df[linha,2]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 3, include=FALSE, results='asis'}
+elemento <- df[linha,3]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Hora de conclusão**")}
+```
+
+
+```{r resposta 3, include=FALSE, results='asis'}
+elemento <- df[linha,3]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 4, include=FALSE, results='asis'}
+elemento <- df[linha,4]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Email**")}
+```
+
+
+```{r resposta 4, include=FALSE, results='asis'}
+elemento <- df[linha,4]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 5, include=FALSE, results='asis'}
+elemento <- df[linha,5]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Nome**")}
+```
+
+
+```{r resposta 5, include=FALSE, results='asis'}
+elemento <- df[linha,5]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 6, echo=FALSE, results='asis'}
+elemento <- df[linha,7]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Nome completo**")}
+```
+
+
+```{r resposta 6, echo=FALSE, results='asis'}
+elemento <- df[linha,7]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 7, echo=FALSE, results='asis'}
+elemento <- df[linha,10]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Cargo: número do cargo**")}
+```
+
+
+```{r resposta 7, echo=FALSE, results='asis'}
+elemento <- df[linha,10]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 8, echo=FALSE, results='asis'}
+elemento <- df[linha,11]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Cargo: área de atribuição**")}
+```
+
+
+```{r resposta 8, echo=FALSE, results='asis'}
+elemento <- df[linha,11]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 9, echo=FALSE, results='asis'}
+elemento <- df[linha,12]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Cargo: município ou comarca**")}
+```
+
+
+```{r resposta 9, echo=FALSE, results='asis'}
+elemento <- df[linha,12]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 10, echo=FALSE, results='asis'}
+elemento <- df[linha,13]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Tipo de atuação**")}
+```
+
+
+```{r resposta 10, echo=FALSE, results='asis'}
+elemento <- df[linha,13]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 10plus, echo=FALSE, results='asis'}
+elemento <- df[linha,14]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Atribuições do cargo ao qual o Plano de Atuação está vinculado:**")}
+```
+
+
+```{r resposta 10plus, echo=FALSE, results='asis'}
+elemento <- df[linha,14]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 11, echo=FALSE, results='asis'}
+elemento <- df[linha,15]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**O cargo informado acima já possui Plano de Atuação vigente no ano de 2023 e formalizado?**")}
+```
+
+
+```{r resposta 11, echo=FALSE, results='asis'}
+elemento <- df[linha,15]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 12, echo=FALSE, results='asis'}
+elemento <- df[linha,16]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Informe, no campo abaixo, o procedimento Sei em que o Plano de Atuação está formalizado.**")}
+```
+
+
+```{r resposta 12, echo=FALSE, results='asis'}
+elemento <- df[linha,16]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 13, echo=FALSE, results='asis'}
+elemento <- df[linha,17]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Considerando o Planejamento Estratégico MPES 2024-2032, você entende ser necessário atualizar o Plano de Atuação informado na pergunta anterior para o próximo ano?**")}
+```
+
+
+```{r resposta 13, echo=FALSE, results='asis'}
+elemento <- df[linha,17]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r pergunta 14, echo=FALSE, results='asis'}
+elemento <- df[linha,18]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos judiciais em trâmite na Promotoria de Justiça**")}
+```
+
+
+```{r resposta 14, echo=FALSE, results='asis'}
+elemento <- df[linha,18]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 15, echo=FALSE, results='asis'}
+elemento <- df[linha,19]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Indique os temas / assuntos mais recorrentes dos procedimentos extrajudiciais em trâmite na Promotoria de Justiça**")}
+```
+
+
+```{r resposta 15, echo=FALSE, results='asis'}
+elemento <- df[linha,19]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 16, echo=FALSE, results='asis'}
+elemento <- df[linha,20]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Na sua análise, qual(ais) a(s) principal(ais) causa(s) sociais, culturais, econômicas, dentre outras que podem ser relacionadas às demandas acima identificadas? **")}
+```
+
+
+```{r resposta 16, echo=FALSE, results='asis'}
+elemento <- df[linha,20]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+```{r pergunta 17, echo=FALSE, results='asis'}
+elemento <- df[linha,23]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat("**Principais problemas identificados**")}
+```
+
+
+```{r resposta 17, echo=FALSE, results='asis'}
+elemento <- df[linha,23]
+celemento <- gsub(';','  \n',as.character(elemento))
+x = is.na.data.frame(elemento) 
+if(x){cat('')} else {cat(celemento)}
+```
+
+
+```{r atencaofinal, echo=FALSE, results='asis'}
+cat('**ATENÇÃO**', '\n', '\n')
+cat('Eventuais recursos extras (pessoal, diárias, passagens, campanhas, aquisições, etc.) destinados à(s) ação(ões) prevista(s) neste Plano de Atuação deverão ser solicitadas e aprovadas em procedimento específico.','\n','\n')
+cat('Data de elaboração: ')
+elemento <- df[linha,3]
+valor_unix <- elemento
+valor_numeric <- as.numeric(valor_unix)
+data_hora <- as.POSIXct(valor_numeric, origin = "1970-01-01")
+data <- format(data_hora, "%d-%m-%Y")
+cat(data)
+```
