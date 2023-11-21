@@ -68,4 +68,3 @@ while(nrow(df) >= valor_atual) {
 
 # Feche a conexão com o banco de dados
 dbDisconnect(con)
-
