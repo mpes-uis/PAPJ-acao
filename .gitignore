@@ -2,3 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
+config.cfg
+data/
+.sqlite
+*.sqlite
+output/
+*.pdf
